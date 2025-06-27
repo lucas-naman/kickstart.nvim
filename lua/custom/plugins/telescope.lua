@@ -8,7 +8,6 @@ return {
             enabled = true
         }, {"nvim-telescope/telescope-file-browser.nvim", enabled = true}
     },
-    branch = "0.1.x",
     config = function()
         local telescope = require("telescope")
         local actions = require("telescope.actions")
@@ -56,5 +55,6 @@ return {
         map("n", "<leader>ff", builtin.find_files, opts) -- Lists files in your current working directory, respects .gitignore
         map("n", "<leader>fx", builtin.treesitter, opts) -- Lists tree-sitter symbols
         map("n", "<leader>fs", builtin.spell_suggest, opts) -- Lists spell options
+		  map("n", "<leader>lg", function() builtin.live_grep({glob_pattern = { "!vendor/" },})end, opts) -- search text, exclude the vendor file
     end
 }

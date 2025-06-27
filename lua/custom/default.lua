@@ -1,4 +1,4 @@
-vim.g.mapleader = ","
+vim.g.mapleader = " "
 
 vim.opt.encoding = "utf-8"
 
@@ -20,6 +20,7 @@ vim.opt.wildmenu = true
 
 vim.opt.tabstop = 3
 vim.opt.shiftwidth = 3
+vim.opt.scrolloff = 10
 
 -- filetype related 
 vim.api.nvim_create_autocmd("FileType", {

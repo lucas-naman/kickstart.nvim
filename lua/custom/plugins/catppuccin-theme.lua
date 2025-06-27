@@ -1,8 +1,7 @@
 return {
     "catppuccin/nvim",
     name = "catppuccin",
-    tag = "v1.7.0",
-    enabled = true,
+	 enabled = true,
     priority = 1000,
     config = function()
         vim.opt.termguicolors = true
