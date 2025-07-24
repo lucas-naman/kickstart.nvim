@@ -46,6 +46,9 @@ return {
           map('gO', require('telescope.builtin').lsp_document_symbols, 'Open Document Symbols')
           map('gW', require('telescope.builtin').lsp_dynamic_workspace_symbols, 'Open Workspace Symbols')
           map('grt', require('telescope.builtin').lsp_type_definitions, '[G]oto [T]ype Definition')
+          map('goi', function()
+            vim.lsp.buf.code_action { context = { only = { 'source.organizeImports' } }, apply = true }
+          end, '[O]rganize [I]mports')
 
           -- Add keymap for formatting on save if you don't use a dedicated formatter plugin like conform.nvim
           map('<leader>fm', function()
@@ -181,6 +184,8 @@ return {
         -- Add goimports and golines here to be managed by mason-tool-installer
         'goimports',
         'golines', -- Optional, but good for Go formatting
+        'gofumpt',
+        'golines',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
