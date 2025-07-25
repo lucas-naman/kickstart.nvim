@@ -54,7 +54,7 @@ return {
     local map = vim.keymap.set
     local opts = { noremap = true, silent = true }
 
-    map('n', '-', ':Telescope file_browser<CR>')
+    map('n', ';', ':Telescope file_browser<CR>')
 
     map('n', '<leader>ff', builtin.find_files, opts) -- Lists files in your current working directory, respects .gitignore
     map('n', '<leader>fx', builtin.treesitter, opts) -- Lists tree-sitter symbols
