@@ -19,7 +19,7 @@ return {
         layout_strategy = 'horizontal',
         layout_config = {
           prompt_position = 'top',
-          preview_width = 0.7,
+          preview_width = 0.6,
         },
         mappings = {
           i = {
@@ -62,7 +62,5 @@ return {
     map('n', '<leader>lg', function()
       builtin.live_grep { glob_pattern = { '!vendor/' } }
     end, opts) -- search text, exclude the vendor file
-
-    map('n', '<leader>gs', builtin.git_status, opts) -- git status
   end,
 }
